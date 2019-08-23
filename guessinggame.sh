@@ -1,21 +1,6 @@
 #!/usr/bin/env bash
 # File: guessinggame.sh
-
-#22-Aug-2019 Joseph Blas  Created this.
-
-function file_counter {
-count=0
-# go through the whole directory listing, including hidden files
-for name in * .*
-do
-    if [[ ! -d $name ]]
-    then
-        # not a directory so count it
-        count=$(($count+1))
-    fi
-done
-echo $count
-}
+# 22-Aug-2019 Joseph Blas  Created this.
 
 guess=-1
 typeset -i num=0
@@ -23,7 +8,7 @@ typeset -i num=0
 echo "Guess how many files in current directory"
 
 # Use file_counter
-(( answer = file_counter))
+answer=$(ls -l | wc -l)
 
 # Guess how many files
 while (( guess != answer )); do
@@ -35,4 +20,4 @@ while (( guess != answer )); do
 		echo "Lower..."
 	fi
 done
-echo -e "Correct!"
+echo -e "Correct! That took $num guesses.\n"
