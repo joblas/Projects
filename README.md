@@ -4,7 +4,7 @@
 
 You have unlimited tries until you get the answer correct.
 
-Here is the *code*
+Here is the **code**
 
 '''
 guess=-1
@@ -13,6 +13,7 @@ answer=$(ls -A| wc -l)
 
 echo "Guess how may files in current directory"
 
+# Guess the number
 while (( guess != answer )); do
         num=num+1
         read -p "Enter guess $num: " guess
@@ -23,9 +24,8 @@ while (( guess != answer )); do
         fi
 done
 echo -e "Correct! That took $num guesses.\n"
-
 '''
 
-See link to [github] (https://github.com/joblas/Projects.git)
+See link to ([github](https://github.com/joblas/Projects.git))
 
 nano README.md
