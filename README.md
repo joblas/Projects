@@ -5,8 +5,7 @@
 You have unlimited tries until you get the answer correct.
 
 Here is the **code**
-
-'''
+```
 guess=-1
 typeset -i num=0
 answer=$(ls -A| wc -l)
@@ -24,7 +23,7 @@ while (( guess != answer )); do
         fi
 done
 echo -e "Correct! That took $num guesses.\n"
-'''
+```
 
 See link to ([github](https://github.com/joblas/Projects.git))
 
