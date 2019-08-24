@@ -4,11 +4,9 @@
 
 guess=-1
 typeset -i num=0
+answer=$(ls -A| wc -l)
 
 echo "Guess how many files in current directory"
-
-# Use file_counter
-answer=$(ls -l | wc -l)
 
 # Guess how many files
 while (( guess != answer )); do
@@ -20,4 +18,5 @@ while (( guess != answer )); do
 		echo "Lower..."
 	fi
 done
+
 echo -e "Correct! That took $num guesses.\n"
