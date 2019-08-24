@@ -26,5 +26,3 @@ echo -e "Correct! That took $num guesses.\n"
 ```
 
 See link to ([github](https://github.com/joblas/Projects.git))
-
-nano README.md
