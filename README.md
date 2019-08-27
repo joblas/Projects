@@ -4,7 +4,7 @@
 
 You have unlimited tries until you get the answer correct.
 
-Here is the **code**
+Here is the **code** that has 21 lines of code
 ```
 guess=-1
 typeset -i num=0

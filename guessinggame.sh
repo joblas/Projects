@@ -4,7 +4,7 @@
 
 guess=-1
 typeset -i num=0
-answer=$(ls -A| wc -l)
+answer=$(ls -A | wc -l)
 
 echo "Guess how may files in current directory"
 
