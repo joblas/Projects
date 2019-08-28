@@ -3,8 +3,8 @@
 ## This Game counts how many files are in the current working directory plus 1 hidden file
 
 You have unlimited tries until you get the answer correct.
-
-Here is the **code** that has 21 lines of code
+** Made August 23 2019 **
+** Total lines of *code* 21**
 ```
 guess=-1
 typeset -i num=0
