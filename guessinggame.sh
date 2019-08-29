@@ -9,12 +9,12 @@ answer=$(ls -A | wc -l)
 echo "Guess how may files in current directory"
 
 # Guess how many files
-while [[ guess != answer ]]; do
+while (( guess != answer )); do
 	num=num+1
 	read -p "Enter guess $num: " guess
-	if [[ guess < answer ]]; then
+	if (( guess < answer )); then
 		echo "Higher..."
-	elif [[ guess > answer ]]; then
+	elif (( guess > answer )); then
 		echo "Lower..."
 	fi
 done
