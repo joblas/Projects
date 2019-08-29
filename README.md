@@ -1,6 +1,6 @@
 # Joe's Guessing Game
 
-## This Game counts how many files are in the current working directory plus 1 hidden file
+## This Game counts how many files are in the current working directory.
 
 ## ** Made August 23 2019 **
 ## ** Total lines of *code* 21**
