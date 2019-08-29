@@ -23,4 +23,4 @@ while [[ $guess -ne $file_counter ]]
 				answer
 	fi
 done
-echo "Correct!" 
+echo "Correct! You guessed $num times"
