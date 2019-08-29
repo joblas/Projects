@@ -6,6 +6,9 @@
 ## ** Total lines of *code* 21**
 
 ```
+#!/usr/bin/env bash
+# File: guessinggame.sh
+
 guess=-1
 typeset -i num=0
 answer=$(ls -A| wc -l)
