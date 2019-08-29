@@ -16,10 +16,10 @@ while [[ $guess -ne $file_counter ]]
 		if [[ -z $guess ]]; then
 				answer
 		elif [[ $guess -lt $file_counter ]]; then
-				echo "Higher..."
+				echo "Guess Higher..."
 				answer
 		elif [[ $guess -gt $file_counter ]]; then
-				echo "Lower..."
+				echo "Guess Lower..."
 				answer
 	fi
 done
