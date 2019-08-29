@@ -2,20 +2,25 @@
 # File: guessinggame.sh
 # 08-22-2019 Joseph BLas Created this.
 
-guess=-1
+function answer {
+	echo "Guess how many files in current directory"
+	read guess
+}
+
 typeset -i num=0
-answer=$(ls -A | wc -l)
+file_counter=$(ls -1 | wc -l)
 
-echo "Guess how may files in current directory"
-
-# Guess how many files
-while (( guess != answer )); do
-	num=num+1
-	read -p "Enter guess $num: " guess
-	if (( guess < answer )); then
-		echo "Higher..."
-	elif (( guess > answer )); then
-		echo "Lower..."
+while [[ $guess -ne $file_counter ]]
+ 	do
+	 num=num+1
+		if [[ -z $guess ]]; then
+				answer
+		elif [[ $guess -lt $file_counter ]]; then
+				echo "Higher..."
+				answer
+		elif [[ $guess -gt $file_counter ]]; then
+				echo "Lower..."
+				answer
 	fi
 done
-echo -e "Correct! That took $num guesses.\n"
+echo "Correct!" 
