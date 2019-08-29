@@ -2,7 +2,7 @@ all: guessinggame.sh README.md
 
 guessinggame.sh:
 	touch guessinggame.sh 
-	echo "# Guessing Game" >> READ.md
+	echo "# Guessing Game" >> README.md
 	echo " " >> README.md
 
 README.md: 
