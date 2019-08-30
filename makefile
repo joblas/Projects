@@ -1,15 +1,10 @@
-all: guessinggame.sh README.md
+all: README.md guessinggame.sh
 
-guessinggame.sh:
-	touch guessinggame.sh 
-	echo "# Guessing Game" >> README.md
-	echo " " >> README.md
-
-README.md: 
-	echo "**Today is :**" `date` >> README.md
-	echo " " >> README.md
-	echo "** Total lines of *Code* in Guessing:** " `wc -l < guessinggame.sh` >> README.md
-
+README.md:
+	echo "# Joe's Guessing Game" > README.md
+	echo -n "- Date: " >> README.md 
+	date >> README.md
+	echo -n " - Lines: " >> README.md
+	wc -l < guessinggame.sh >> README.md
 clean:
-	rm guessinggame.sh
 	rm README.md
