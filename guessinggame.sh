@@ -7,7 +7,7 @@ function answer {
 	read guess
 }
 typeset -i num=0
-file_counter=$(ls -A | wc -l)
+file_counter=$(ls -l | wc -l)
 
 while [[ $guess != $file_counter ]]; do
 	num=num+1
