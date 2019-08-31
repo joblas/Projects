@@ -8,7 +8,7 @@ function answer {
 }
 
 typeset -i num=0
-file_counter=$(ls -1 | wc -l)
+file_counter=$(ls -l | wc -l)
 
 while [[ $guess -ne $file_counter ]]
  	do
