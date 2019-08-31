@@ -6,21 +6,19 @@ function answer {
 	echo "Guess how many files in current directory"
 	read guess
 }
-
 typeset -i num=0
-file_counter=$(ls -l | wc -l)
+file_counter=$(ls -A | wc -l)
 
-while [[ $guess -ne $file_counter ]]
- 	do
-	 num=num+1
+while [[ $guess != $file_counter ]]; do
+	num=num+1
 		if [[ -z $guess ]]; then
 				answer
-		elif [[ $guess -lt $file_counter ]]; then
+		elif [[ $guess < $file_counter ]]; then
 				echo "Guess Higher..."
 				answer
-		elif [[ $guess -gt $file_counter ]]; then
+		elif [[ $guess > $file_counter ]]; then
 				echo "Guess Lower..."
 				answer
-	fi
+		fi
 done
 echo "Correct! You guessed $num times"
