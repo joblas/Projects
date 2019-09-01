@@ -6,7 +6,7 @@ typeset -i num=0
 file_counter=$(ls -l | wc -l)
 
 function answer {
-	echo "Guess how many files in current directory"
+	echo "Guess how many files are in the current directory"
 	read guess
 }
 while [[ $guess != $file_counter ]]; do
