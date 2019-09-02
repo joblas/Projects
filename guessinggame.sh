@@ -3,23 +3,23 @@
 # 08-22-2019 Joseph BLas Created this.
 
 typeset -i num=0
-file_counter=$(ls -l | wc -l)
+fileCounter=$( ls -la | wc -l)
 
-function answer {
+function answer() {
 	echo "Guess how many files are in the current directory"
 	read guess
 }
-while [[ $guess != $file_counter ]]; do
+while [[ $guess != $fileCounter ]]; do
 	num=num+1
 		if [[ -z $guess ]]; then
 				answer
-		elif [[ $guess < $file_counter ]]; then
+		elif [[ $guess < $fileCounter ]]; then
 				echo ""
 				echo "Guess Higher..."
 				answer
-		elif [[ $guess > $file_counter ]]; then
+		elif [[ $guess > $fileCounter ]]; then
 				echo ""
-				echo "Guess Lower..."
+				echo "Guess_Lower..."
 				answer
 		fi
 done
