@@ -19,7 +19,7 @@ while [[ $guess != $fileCounter ]]; do
 				answer
 		elif [[ $guess > $fileCounter ]]; then
 				echo ""
-				echo "Guess_Lower..."
+				echo "Guess Lower..."
 				answer
 		fi
 done
