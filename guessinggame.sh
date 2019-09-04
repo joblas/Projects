@@ -5,7 +5,7 @@
 typeset -i num=0
 fileCounter=$( ls -la | wc -l)
 
-function answer() {
+function answer {
 	echo "Guess how many files are in the current directory"
 	read guess
 }
