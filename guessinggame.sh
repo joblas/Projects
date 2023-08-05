@@ -1,27 +1,26 @@
 #!/usr/bin/env bash
+# 08-22-2019 Joseph Blas Created this.
 # File: guessinggame.sh
-# 08-22-2019 Joseph BLas Created this.
 
-typeset -i num=0
-fileCounter=$( ls -la | wc -l)
+typeset -i attemptCount=0
+fileCount=$(ls -lA | wc -l)
 
-function answer {
-	echo "Guess how many files are in the current directory"
-	read guess
+function promptAndRead {
+    local message=$1
+    echo -e "\n${message}"
+    echo "Guess how many files are in the current directory:"
+    read guess
 }
-while [[ $guess != $fileCounter ]]; do
-	num=num+1
-		if [[ -z $guess ]]; then
-				answer
-		elif [[ $guess < $fileCounter ]]; then
-				echo ""
-				echo "Guess Higher..."
-				answer
-		elif [[ $guess > $fileCounter ]]; then
-				echo ""
-				echo "Guess Lower..."
-				answer
-		fi
+
+while [[ $guess -ne $fileCount ]]; do
+    attemptCount=$((attemptCount + 1))
+    if [[ -z $guess ]]; then
+        promptAndRead "Welcome to the guessing game!"
+    elif [[ $guess -lt $fileCount ]]; then
+        promptAndRead "Guess Higher..."
+    elif [[ $guess -gt $fileCount ]]; then
+        promptAndRead "Guess Lower..."
+    fi
 done
-echo "Correct! You guessed $num times"
-echo ""
+
+echo -e "\nCorrect! You guessed $attemptCount times\n"
